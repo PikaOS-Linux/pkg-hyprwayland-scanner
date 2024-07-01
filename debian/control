@@ -7,7 +7,7 @@ Build-Depends: debhelper-compat (= 13),
                build-essential,
                cmake-extras,
                cmake,
-               libpugixml  
+               libpugixml-dev
 Rules-Requires-Root: no
 
 Package: hyprwayland-scanner
