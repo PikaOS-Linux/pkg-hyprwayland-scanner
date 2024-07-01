@@ -65,7 +65,7 @@ srcdir = $(shell debian/scripts/get_pwd.sh)
 
 ## overriding dh_auto_configure to add custom configs:
 override_dh_auto_configure:
-	cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_INSTALL_DATADIR=/usr/share -DCMAKE_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu -B ./build
+	cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_INSTALL_DATADIR=/usr/share -DCMAKE_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu -S . -B ./build
 
 override_dh_build:
 	cmake --build ./build --config Release
