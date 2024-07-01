@@ -16,7 +16,7 @@ Depends:
          ${shlibs:Depends},
          ${misc:Depends},
          libpugixml1v5
-Provides: hyprwayland-scanner
+Provides: hyprwayland-scanner (= ${binary:Version}),
 Description: A Hyprland implementation of wayland-scanner.
 
 Package: libhyprwayland-scanner-dev
@@ -24,6 +24,6 @@ Architecture: linux-any
 Depends:
          ${shlibs:Depends},
          ${misc:Depends},
-         hyprwayland-scanner (= ${binary:Version}),
-Provides: libhyprwayland-scanner-dev
+         libhyprwayland-scanner (= ${binary:Version}),
+Provides: hyprwayland-scanner-dev (= ${binary:Version}),
 Description: Development files for the Hyprland implementation of wayland-scanner.
