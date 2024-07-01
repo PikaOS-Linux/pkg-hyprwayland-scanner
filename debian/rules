@@ -12,6 +12,7 @@ override_dh_auto_configure:
 override_dh_install:
 	DESTDIR=debian/tmp cmake --install build
 	dh_install
+	rm -rfv debian/hyprwayland-scanner/usr/lib/*/pkgconfig/hyprwayland-scanner.pc
 ## === End end of region ===
 
 ## This here will start the build:
