@@ -10,13 +10,13 @@ Build-Depends: debhelper-compat (= 13),
                libpugixml-dev
 Rules-Requires-Root: no
 
-Package: libhyprwayland-scanner
+Package: hyprwayland-scanner
 Architecture: linux-any
 Depends:
          ${shlibs:Depends},
          ${misc:Depends},
          libpugixml1v5
-Provides: hyprwayland-scanner (= ${binary:Version}),
+Provides: libhyprwayland-scanner (= ${binary:Version}),
 Description: A Hyprland implementation of wayland-scanner.
 
 Package: libhyprwayland-scanner-dev
