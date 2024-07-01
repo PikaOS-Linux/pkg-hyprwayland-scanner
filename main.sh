@@ -7,8 +7,8 @@ set -e
 apt-get update
 
 # Clone Upstream
-git clone --recurse-submodules https://github.com/hyprwm/hyprcursor -b v0.3.10
-cd hyprcursor
+git clone --recurse-submodules https://github.com/hyprwm/hyprwayland-scanner -b v0.3.10
+cd hyprwayland-scanner
 cp -rvf ../debian ./
 
 # Get build deps
