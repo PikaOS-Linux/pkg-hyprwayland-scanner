@@ -65,16 +65,16 @@ srcdir = $(shell debian/scripts/get_pwd.sh)
 
 ## overriding dh_auto_configure to add custom configs:
 override_dh_auto_configure:
-	cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_INSTALL_DATADIR=/usr/share -DCMAKE_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu
+	cmake --no-warn-unused-cli -DCMAKE_BUILD_TYPE:STRING=Release -DCMAKE_INSTALL_DATADIR=/usr/share -DCMAKE_LIBRARY_PATH=/usr/lib/x86_64-linux-gnu -S hyprwayland-scanner -B ./build
 
 override_dh_build:
-	cmake --build --config Release
+	cmake --build ./build --config Release
 
 ## overriding dh_install to install files to a package:
 override_dh_auto_install:
 
 override_dh_install:
-	DESTDIR=$(pkgdir) cmake --install
+	DESTDIR=$(pkgdir) cmake --install build
 ## === End end of region ===
 
 ## This here will start the build:
